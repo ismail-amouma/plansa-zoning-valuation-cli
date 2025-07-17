@@ -1,0 +1,55 @@
+{
+    "List": [
+        {
+            "GroupType": "Local Variation (TNV)",
+            "Code": "V0004|_9_8_6_18_18",
+            "Description": "Minimum Frontage  <i>(Minimum frontage for a detached dwelling is 9m; semi-detached dwelling is 8m; row dwelling is 6m; group dwelling is 18m; residential flat building is 18m)</i>"
+        },
+        {
+            "GroupType": "Local Variation (TNV)",
+            "Code": "V0005|_250_250_250_250_",
+            "Description": "Minimum Site Area  <i>(Minimum site area for a detached dwelling is 250 sqm; semi-detached dwelling is 250 sqm; row dwelling is 250 sqm; group dwelling is 250 sqm)</i>"
+        },
+        {
+            "GroupType": "Local Variation (TNV)",
+            "Code": "V0008|2",
+            "Description": "Maximum Building Height (Levels)  <i>(Maximum building height is 2 levels)</i>"
+        },
+        {
+            "GroupType": "Overlay",
+            "Code": "O0303|Allstructuresover45metres",
+            "Description": "Airport Building Heights (Regulated)  <i>(All structures over 45 metres)</i>"
+        },
+        {
+            "GroupType": "Overlay",
+            "Code": "O4804",
+            "Description": "Prescribed Wells Area"
+        },
+        {
+            "GroupType": "Overlay",
+            "Code": "O5404",
+            "Description": "Regulated and Significant Tree"
+        },
+        {
+            "GroupType": "Overlay",
+            "Code": "O5710",
+            "Description": "Stormwater Management"
+        },
+        {
+            "GroupType": "Overlay",
+            "Code": "O6001",
+            "Description": "Traffic Generating Development"
+        },
+        {
+            "GroupType": "Overlay",
+            "Code": "O6302",
+            "Description": "Urban Tree Canopy"
+        },
+        {
+            "GroupType": "Zone",
+            "Code": "Z1506",
+            "Description": "Established Neighbourhood"
+        }
+    ],
+    "HTMLString": "<div><h4 class='font-weight-bold'>Zones</h4><hr /><p class='jPopPSA'>Established Neighbourhood</p><h4 class='font-weight-bold'>Overlays</h4><hr /><p class='jPopPSA'>Airport Building Heights (Regulated)  <i>(All structures over 45 metres)</i></p><p class='jPopPSA'>Prescribed Wells Area</p><p class='jPopPSA'>Regulated and Significant Tree</p><p class='jPopPSA'>Stormwater Management</p><p class='jPopPSA'>Traffic Generating Development</p><p class='jPopPSA'>Urban Tree Canopy</p><h4 class='font-weight-bold'>Technical Numeric Variations (TNVs)</h4><hr /><p class='jPopPSA'>Minimum Frontage  <i>(Minimum frontage for a detached dwelling is 9m; semi-detached dwelling is 8m; row dwelling is 6m; group dwelling is 18m; residential flat building is 18m)</i></p><p class='jPopPSA'>Minimum Site Area  <i>(Minimum site area for a detached dwelling is 250 sqm; semi-detached dwelling is 250 sqm; row dwelling is 250 sqm; group dwelling is 250 sqm)</i></p><p class='jPopPSA'>Maximum Building Height (Levels)  <i>(Maximum building height is 2 levels)</i></p></div>"
+}

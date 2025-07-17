@@ -1,0 +1,10 @@
+# Python virtual environment
+.venv/
+
+# macOS Finder metadata
+.DS_Store
+
+# Python bytecode / cache artifacts
+__pycache__/
+*.py[cod]
+*$py.class
