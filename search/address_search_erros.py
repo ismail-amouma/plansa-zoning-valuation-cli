@@ -4,7 +4,7 @@ from typing import Any, Optional
 class AddressSearchError(Exception):
     """Base error for address lookups."""
 
-    default_msg = "Address lookup failed."
+    default_msg = "Address lookup failed."  
 
     def __init__(self, msg: Optional[str] = None, *, detail: Any = None):
         super().__init__(msg or self.default_msg)

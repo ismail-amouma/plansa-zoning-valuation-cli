@@ -1,0 +1,19 @@
+{
+    "results": [
+        {
+            "layerId": 43,
+            "layerName": "Valuation",
+            "displayFieldName": "ASSNO",
+            "value": "0526428001",
+            "attributes": {
+                "Location": "19 PALMER ST PROSPECT SA 5082 LT 16 D2263 ",
+                "OBJECTID": "1029098",
+                "Shape": "Polygon",
+                "Valuation No": "0526428001",
+                "Title Prefix": "CT",
+                "Title Volume": "5730",
+                "Title Folio": "224"
+            }
+        }
+    ]
+}

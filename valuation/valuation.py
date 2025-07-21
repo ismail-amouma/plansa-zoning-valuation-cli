@@ -80,10 +80,6 @@ async def get_zone_policies_raw(session: AsyncSession, valuation_sid: str) -> li
         response_json = response.json()
         if isinstance(response_json, list):
             policies_responses.append(response_json)
-            content=response.json()[0].get('Content', '')
-            soup= BeautifulSoup(content, 'html.parser')
-            with open('exports/Zone Planning and Development Policies.html', 'w', encoding='utf-8') as file:
-                file.write(soup.prettify())
 
     return policies_responses
 
