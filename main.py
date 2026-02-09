@@ -51,7 +51,7 @@ def ensure_llm_credentials():
 
 
 def cli():
-    parser = argparse.ArgumentParser(description="Zoning Valuation CLI")
+    parser = argparse.ArgumentParser(description="PlanSA Zoning Valuation CLI")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('--address', type=str, help='Property address (e.g., "9 ELIZABETH ST NORWOOD SA 5067")')
     group.add_argument('--coords', nargs=2, type=float, metavar=('LAT', 'LON'),
