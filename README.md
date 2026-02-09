@@ -8,7 +8,7 @@ Without tooling, the process usually means jumping between different services, c
 
 ## What it does
 
-The tool accepts property input either as an address or as coordinates. It resolves the valuation ID from SA geospatial services, fetches zone policy HTML from PlanSA endpoints, parses quantitative controls into a typed Pydantic model called `PlanningQuantitativeAssessment`, and prints a clean structured result in the terminal.
+The tool accepts property input either as an address or as coordinates. It resolves the valuation ID from SA geospatial services, fetches zone policy HTML from PlanSA endpoints, parses quantitative controls into a typed Pydantic model called [`PlanningQuantitativeAssessment`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/ai_parser/output_class.py), and prints a clean structured result in the terminal.
 
 ## Why this project is valuable
 
@@ -22,13 +22,15 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Dependencies are pinned in [`requirements.txt`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/requirements.txt).
+
 ## Configure LLM credentials
 
 On first run, the CLI prompts for credentials and saves them to `.env`. You can also set environment values manually. For OpenAI, set `LLM_PROVIDER=openai` and `OPENAI_API_KEY=...`. For Azure OpenAI, set `LLM_PROVIDER=azure`, `AZURE_API_KEY=...`, `AZURE_ENDPOINT=...`, and `AZURE_API_VERSION=...`.
 
 ## How to use
 
-Run with an address:
+Run the CLI from [`main.py`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/main.py) with an address:
 
 ```bash
 python main.py --address "19 PALMER ST PROSPECT SA 5082"
@@ -44,12 +46,12 @@ During execution, the CLI shows the resolved valuation SID, a policy preview, an
 
 ## Output model (core fields)
 
-The parser writes into `PlanningQuantitativeAssessment` in `ai_parser/output_class.py`. Core fields include `site_coverage`, `building_height_levels`, `building_height_m`, `primary_street_setback_m`, `secondary_street_setback`, and `car_parking_spaces`. Numeric constraints are represented by `NumericLimit`, which stores the direction (`min` or `max`), value, and unit.
+The parser writes into [`PlanningQuantitativeAssessment`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/ai_parser/output_class.py) in [`ai_parser/output_class.py`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/ai_parser/output_class.py). Core fields include `site_coverage`, `building_height_levels`, `building_height_m`, `primary_street_setback_m`, `secondary_street_setback`, and `car_parking_spaces`. Numeric constraints are represented by [`NumericLimit`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/ai_parser/output_class.py), which stores the direction (`min` or `max`), value, and unit.
 
 ## Project layout
 
-The entry point and orchestration live in `main.py`. Address and coordinate lookup logic lives in `search/`, and zone policy retrieval lives in `valuation/`. The `ai_parser/` package contains prompt configuration, schema definitions, and parser graph setup. Typed lookup models are in `models.py`, helper parsing utilities are in `parsers.py`, sample artifacts are in `exports/`, and experimental scripts are in `scratch/`.
+The entry point and orchestration live in [`main.py`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/main.py). Address and coordinate lookup logic lives in [`search/`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/tree/main/search), and zone policy retrieval lives in [`valuation/`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/tree/main/valuation). The [`ai_parser/`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/tree/main/ai_parser) package contains prompt configuration, schema definitions, and parser graph setup. Typed lookup models are in [`models.py`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/models.py), helper parsing utilities are in [`parsers.py`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/parsers.py), sample artifacts are in [`exports/`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/tree/main/exports), and experimental scripts are in [`scratch/`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/tree/main/scratch).
 
 ## Technical deep dive
 
-Detailed scope and architecture are documented in `docs/PROJECT_SCOPE.md`.
+Detailed scope and architecture are documented in [`docs/PROJECT_SCOPE.md`](https://github.com/ismail-amouma/plansa-zoning-valuation-cli/blob/main/docs/PROJECT_SCOPE.md).
